@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>जगन्नाथ रथ यात्रा - विशेष शुभकामनाएँ!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Teko:wght@400;700&family=Baloo+2:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #FF7733;
+      --secondary-color: #FFC107;
+      --text-color: #EAEAEA;
+      --bg-color: #1A1A1A;
+      --card-bg-color: #2C2C2C;
+      --accent-color: #FFAB40;
+      --heading-color: #FFFFFF;
+      --shadow-color: rgba(255, 255, 255, 0.08);
+      --countdown-bg: rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #121212, #202020, #121212);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-section {
+      padding: 20px 15px 15px;
+      color: var(--heading-color);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    #pageGreeting {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.8em;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      min-height: 1.2em;
+    }
+
+    #pageGreeting .name {
+      color: var(--primary-color);
+    }
+
+    .deity-image-container {
+      margin-bottom: 20px;
+    }
+
+    .deity-image-container img {
+      max-width: 90%;
+      max-height: 350px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      border: 4px solid var(--secondary-color);
+    }
+
+    #countdownTimer {
+      font-family: 'Teko', sans-serif;
+      font-size: 1.8em;
+      color: var(--heading-color);
+      background-color: var(--countdown-bg);
+      padding: 10px;
+      border-radius: 8px;
+      margin: 15px auto;
+      max-width: 400px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    #countdownTimer span {
+      display: inline-block;
+      margin: 0 8px;
+      color: var(--primary-color);
+    }
+
+    #countdownTimer .label {
+      font-size: 0.5em;
+      display: block;
+      color: var(--secondary-color);
+    }
+
+    section {
+      padding: 20px 15px;
+      margin-bottom: 20px;
+      background-color: var(--card-bg-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--shadow-color);
+    }
+
+    .festival-info h2, .final-call h2 {
+      font-family: 'Teko', sans-serif;
+      color: var(--primary-color);
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .wishes-section h3 {
+      color: var(--secondary-color);
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .wishes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .wish-item {
+      background-color: #3a3a3a;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .wish-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .wish-item .emoji {
+      font-size: 2em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .positive-vibes {
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .name-input-label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1em;
+      color: var(--secondary-color);
+    }
+
+    .name-input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid var(--accent-color);
+      background-color: #444;
+      color: var(--text-color);
+      font-size: 0.9em;
+      width: 70%;
+      max-width: 280px;
+    }
+
+    .whatsapp-share-button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    }
+
+    .note {
+      font-size: 0.8em;
+      color: #aaa;
+      margin-top: 8px;
+    }
+
+    footer {
+      background-color: #000;
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 12px;
+      font-size: 0.85em;
+    }
+
+    @media (max-width: 600px) {
+      #pageGreeting { font-size: 1.5em; }
+      .deity-image-container img { max-height: 280px; }
+      #countdownTimer { font-size: 1.5em; padding: 8px; max-width: 90%; }
+      .wishes-grid { grid-template-columns: 1fr 1fr; }
+      .final-call h2, .festival-info h2 { font-size: 1.8em; }
+    }
+
+    @media (max-width: 400px) {
+      .wishes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <div class="container">
+    <header class="hero-section">
+      <div id="pageGreeting"></div>
+      <div id="countdownTimer">
+        रथ यात्रा में शेष:
+        <span id="days">00<div class="label">दिन</div></span>
+        <span id="hours">00<div class="label">घंटे</div></span>
+        <span id="minutes">00<div class="label">मिनट</div></span>
+        <span id="seconds">00<div class="label">सेकंड</div></span>
+      </div>
+      <div class="deity-image-container">
+        <img src="https://iili.io/FuTyUE7.jpg" alt="भगवान जगन्नाथ, बलभद्र और सुभद्रा" />
+      </div>
+    </header>
+
+    <main>
+      <section class="festival-info">
+        <h2>जगन्नाथ रथ यात्रा की धूम!</h2>
+        <p>Hey Folks! 🎉 देखो तो ज़रा! साक्षात प्रभु जगन्नाथ, भैया बलभद्र और बहन सुभद्रा के संग, निकल पड़े हैं अपनी रथ यात्रा पर। यह सिर्फ एक यात्रा नहीं, यह है उत्सव, उमंग और आशीर्वाद का महा-संगम!</p>
+      </section>
+
+      <section class="wishes-section">
+        <h3>आपकी झोली खुशियों से भर जाए!</h3>
+        <div class="wishes-grid">
+          <div class="wish-item"><span class="emoji">🙏</span><p>प्रभु की कृपा!</p></div>
+          <div class="wish-item"><span class="emoji">💖</span><p>मन में शांति!</p></div>
+          <div class="wish-item"><span class="emoji">🌟</span><p>सफलता मिले!</p></div>
+          <div class="wish-item"><span class="emoji">😊</span><p>सदा खुश रहें!</p></div>
+        </div>
+        <p class="positive-vibes">हैप्पीनेस OVERLOADED! पॉजिटिव वाइब्स ONLY!</p>
+      </section>
+
+      <section class="final-call">
+        <h2>बोलो ज़ोरों से... जय जगन्नाथ! 🙌</h2>
+        <div class="input-group">
+          <label for="senderNameInput" class="name-input-label">आपका नाम:</label>
+          <input type="text" id="senderNameInput" class="name-input" placeholder="आपका नाम" value="एक भक्त">
+        </div>
+        <div class="input-group">
+          <label for="recipientNameInput" class="name-input-label">प्राप्तकर्ता का नाम:</label>
+          <input type="text" id="recipientNameInput" class="name-input" placeholder="जिसे भेजना है">
+        </div>
+        <button class="whatsapp-share-button" onclick="shareOnWhatsApp()">📲 शुभकामनाएँ भेजें</button>
+        <p class="note">यह मोबाइल पर सबसे अच्छा काम करता है।<br>डेस्कटॉप पर `Webpage not available` एरर आ सकता है अगर WhatsApp ऐप इंस्टॉल नहीं है।</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>जय जगन्नाथ!</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const recipientName = urlParams.get('to');
+      const senderName = urlParams.get('from');
+      const pageGreetingElement = document.getElementById('pageGreeting');
+
+      if (recipientName) {
+        let greeting = `प्रिय <span class="name">${decodeURIComponent(recipientName)}</span>, `;
+        greeting += senderName ? `<span class="name">${decodeURIComponent(senderName)}</span> ने आपके लिए यह शुभकामना भेजी है!` : `आपके लिए यह विशेष शुभकामना!`;
+        pageGreetingElement.innerHTML = greeting;
+      }
+
+      const countdownElement = {
+        days: document.getElementById('days'),
+        hours: document.getElementById('hours'),
+        minutes: document.getElementById('minutes'),
+        seconds: document.getElementById('seconds')
+      };
+
+      function getNextRathYatraDate() {
+        const currentYear = new Date().getFullYear();
+        const date = new Date(`June 27, ${currentYear} 00:00:00`);
+        return (new Date() > date) ? new Date(`June 27, ${currentYear + 1} 00:00:00`) : date;
+      }
+
+      const rathYatraDate = getNextRathYatraDate().getTime();
+
+      setInterval(() => {
+        const now = new Date().getTime();
+        const distance = rathYatraDate - now;
+
+        if (distance < 0) {
+          document.getElementById('countdownTimer').innerHTML = "रथ यात्रा का उत्सव प्रारंभ!";
+          return;
+        }
+
+        countdownElement.days.innerText = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        countdownElement.hours.innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        countdownElement.minutes.innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        countdownElement.seconds.innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+      }, 1000);
+    });
+
+    function shareOnWhatsApp() {
+      const senderName = document.getElementById('senderNameInput').value || "एक भक्त";
+      const recipientName = document.getElementById('recipientNameInput').value || "";
+
+      const basePageUrl = "https://yourusername.github.io/jagannath-wishes/"; // <-- यहां अपना होस्टेड URL डालें
+
+      if (basePageUrl.includes("yourusername")) {
+        alert("कृपया basePageUrl को अपने होस्टेड पेज के लिंक से अपडेट करें।");
+        return;
+      }
+
+      let pageUrl = `${basePageUrl}?from=${encodeURIComponent(senderName)}`;
+      if (recipientName) pageUrl += `&to=${encodeURIComponent(recipientName)}`;
+
+      const message = `*${senderName}* ने आपके लिए एक गिफ्ट भेजा है। 🎁\n\nइस विशेष शुभकामना को देखें:\n${pageUrl}`;
+      const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(message)}`;
+      window.location.href = whatsappUrl;
+    }
+  </script>
+</body>
+</html>
